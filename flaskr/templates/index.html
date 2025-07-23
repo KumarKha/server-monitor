@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>System Info</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      h1 {
+        color: #333;
+      }
+      .section {
+        margin-bottom: 30px;
+      }
+      pre {
+        background-color: #f4f4f4;
+        padding: 15px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>System Summary</h1>
+
+    <div class="section">
+      <h2>CPU Info</h2>
+      <pre>{{ data["cpu"] | tojson(indent=2) }}</pre>
+    </div>
+
+    <div class="section">
+      <h2>Storage Info</h2>
+      <pre>{{ data["storage"] | tojson(indent=2) }}</pre>
+    </div>
+  </body>
+</html>
